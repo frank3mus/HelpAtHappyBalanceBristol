@@ -25,26 +25,51 @@
     --p-font: 1rem;
 }
 
-/* For WebKit browsers: Chrome, Edge, Safari */
+/* Hide scrollbar initially */
 ::-webkit-scrollbar {
-  width: 6px;
+  width: 0; /* hidden by default */
+  height: 0;
+  transition: width 0.3s ease, height 0.3s ease;
 }
 
-::-webkit-scrollbar-thumb {
-  background-color: #59C4F0; /* your blue */
-  border-radius: 3px;
-  box-shadow: 0 0 8px rgba(89, 196, 240, 0.8); /* glow effect */
-  transition: box-shadow 0.3s ease;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  box-shadow: 0 0 12px rgba(89, 196, 240, 1); /* stronger glow on hover */
-}
-
+/* Fully transparent track */
 ::-webkit-scrollbar-track {
   background: transparent;
 }
 
+/* Scrollbar thumb with glow */
+::-webkit-scrollbar-thumb {
+  border-radius: 6px;
+  background: linear-gradient(to left, #59C4F0, rgba(89,196,240,0));
+  box-shadow: 0 0 10px rgba(89,196,240,0.7);
+  transition: width 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Show scrollbar thumb on hover */
+body:hover ::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+body:hover ::-webkit-scrollbar-thumb {
+  box-shadow: 0 0 20px rgba(89,196,240,1);
+}
+
+/* -----------------------------
+   Firefox
+------------------------------- */
+* {
+  scrollbar-width: thin;           /* thin scrollbar */
+  scrollbar-color: #59C4F0 transparent; /* thumb color + track color */
+}
+
+/* Firefox hover effect using pseudo-class */
+*::-moz-scrollbar-thumb {
+  transition: box-shadow 0.3s ease;
+}
+*::-moz-scrollbar-thumb:hover {
+  box-shadow: 0 0 20px rgba(89,196,240,0.7);
+}
 
 /*----------------------------
     Body
