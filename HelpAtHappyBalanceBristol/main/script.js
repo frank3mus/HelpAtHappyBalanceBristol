@@ -16,31 +16,59 @@ window.onscroll = () => {
     menu.classList.remove('bx-x');
     navlist.classList.remove('active');
 };
-const reviewsTrack = document.querySelector('.reviews-track'); 
-const leftArrow = document.querySelector('.carousel-arrow.left');
-const rightArrow = document.querySelector('.carousel-arrow.right');
-const cards = document.querySelectorAll('.review-card');
 
-// start on middle card (round up if odd number of cards)
-let currentIndex = Math.ceil(cards.length / 2) - 1; 
-const cardWidth = cards[0].offsetWidth + 20; // card width + margin
+function initCarousel(carouselSelector, mobile = false) {
+  const carousel = document.querySelector(carouselSelector);
+  if (!carousel) return;
 
-function updateCarousel() {
-  const wrapperWidth = reviewsTrack.parentElement.offsetWidth;
-  const offset = -(currentIndex * cardWidth) + (wrapperWidth / 2 - cardWidth / 2);
-  reviewsTrack.style.transform = `translateX(${offset}px)`;
+  // Scope everything inside this carousel
+  const reviewsTrack = carousel.querySelector('.reviews-track'); 
+  const leftArrow = carousel.querySelector('.carousel-arrow.left');
+  const rightArrow = carousel.querySelector('.carousel-arrow.right');
+  const cards = carousel.querySelectorAll('.review-card');
+
+  let currentIndex = 0; // start on first card
+
+  function updateCarousel() {
+    const wrapperWidth = reviewsTrack.parentElement.offsetWidth;
+    const cardWidth = cards[0].offsetWidth; 
+    let offset;
+
+    if (mobile) {
+      // show 1 card at a time
+      offset = -(currentIndex * wrapperWidth);
+    } else {
+      // show multiple cards (desktop)
+      offset = -(currentIndex * (cardWidth + 20)); // 20px is gap
+    }
+
+    reviewsTrack.style.transform = `translateX(${offset}px)`;
+
+    // hide/show arrows
+    leftArrow.style.display = currentIndex <= 0 ? 'none' : 'block';
+    rightArrow.style.display = currentIndex >= cards.length - 1 ? 'none' : 'block';
+  }
+
+  // Arrow events
+  rightArrow.addEventListener('click', () => {
+    if (currentIndex < cards.length - 1) {
+      currentIndex++;
+      updateCarousel();
+    }
+  });
+
+  leftArrow.addEventListener('click', () => {
+    if (currentIndex > 0) {
+      currentIndex--;
+      updateCarousel();
+    }
+  });
+
+  // Initialize
+  window.addEventListener('load', updateCarousel);
+  window.addEventListener('resize', updateCarousel);
 }
 
-rightArrow.addEventListener('click', () => {
-  currentIndex = (currentIndex + 1) % cards.length;
-  updateCarousel();
-});
-
-leftArrow.addEventListener('click', () => {
-  currentIndex = (currentIndex - 1 + cards.length) % cards.length;
-  updateCarousel();
-});
-
-// Initialize
-window.addEventListener('load', updateCarousel);
-window.addEventListener('resize', updateCarousel);
+// Example usage
+initCarousel('#reviews-desktop', false);
+initCarousel('#reviews-mobile', true);
