@@ -1,8 +1,22 @@
 <head>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4Z7Y7DYPWD"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-4Z7Y7DYPWD');
+  </script>
+
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <link rel="icon" type="image/png" href="./HappyBalanceImages/favicon-32x32.png" />
   <title>Happy Balance Bristol | Bristol Declutterers</title>
+  <meta name="description" content="Happy Balance Bristol offers professional decluttering and home organisation services. Supporting you to create calm, clutter-free spaces in Bristol and beyond.">
+  <meta name="keywords" content="Bristol decluttering, home organising, declutterers, Happy Balance">
+
 
   <!-- boxicons / remix icons -->
   <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
@@ -66,45 +80,54 @@
          style="display:flex; align-items:center; justify-content:space-between; padding:110px 10% 90px; gap:2rem; background-color:#f8f8f8;">
 
   <div class="main-content" data-aos="fade-in" style="flex:1;">
-    <h4 style="margin:0 0 8px; font-size:1.6rem;">Hi, There!</h4>
-    <h2 style="margin:20px 0; line-height:1.2; font-size:4.5rem; font-weight:900;">
-      We are
-    </h2>
-    <h1> <span style="color:#59C4F0;">Happy</span> <span style="color:#808080;">BALANCE</span></h1>
+    <!-- ✅ decorative text should not be a heading -->
+    <p style="margin:0 0 8px; font-size:1.6rem;">Hi, There!</p>
+
+    <!-- ✅ one proper <h1> with main keywords -->
+    <h1 style="margin:20px 0; line-height:1.2; font-size:4.5rem; font-weight:900;">
+      We are <br><span style="color:#59C4F0;">Happy</span> <span style="color:#808080;">BALANCE</span>
+    </h1>
+
+    <!-- ✅ improved SEO wording -->
     <p style="max-width:620px; line-height:30px; color:#000;">
-      A decluttering company in Bristol run by Claire and SJ since 2016
+      A decluttering and home organising company in Bristol run by Claire and SJ since 2016
     </p>
 
     <div class="social" style="display:flex; gap:17px; margin:40px 0;">
-  <!-- Phone -->
-  <a href="#contact" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'});">
-    <i class="ri-phone-fill" style="display:inline-flex; align-items:center; justify-content:center; width:40px; height:40px; border-radius:50%; font-size:20px; color:#59C4F0;"></i>
-  </a>
-  
-  <!-- Mail -->
-  <a href="#contact" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'});">
-    <i class="ri-mail-fill" style="display:inline-flex; align-items:center; justify-content:center; width:40px; height:40px; border-radius:50%; font-size:20px; color:#59C4F0;"></i>
-  </a>
-  
-  <!-- WhatsApp → scroll to contact -->
-  <a href="#contact" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'});">
-    <i class="ri-whatsapp-fill" style="display:inline-flex; align-items:center; justify-content:center; width:40px; height:40px; border-radius:50%; font-size:20px; color:#59C4F0;"></i>
-  </a>
-  
-  <!-- Instagram -->
-  <a href="https://www.instagram.com/happybalance_247" target="_blank">
-    <i class="ri-instagram-fill" style="display:inline-flex; align-items:center; justify-content:center; width:40px; height:40px; border-radius:50%; font-size:20px; color:#59C4F0;"></i>
-  </a>
-  
-  <!-- Facebook -->
-  <a href="https://www.facebook.com/happybalancebristol" target="_blank">
-    <i class="ri-facebook-fill" style="display:inline-flex; align-items:center; justify-content:center; width:40px; height:40px; border-radius:50%; font-size:20px; color:#59C4F0;"></i>
-  </a>
-</div>
+      <!-- Phone -->
+      <a href="#contact" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'});"
+        aria-label="Scroll to contact section to call us" title="Phone">
+        <i class="ri-phone-fill"></i>
+      </a>
+
+      <!-- Mail -->
+      <a href="#contact" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'});"
+        aria-label="Scroll to contact section to email us" title="Email">
+        <i class="ri-mail-fill"></i>
+      </a>
+
+      <!-- WhatsApp -->
+      <a href="#contact" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'});"
+        aria-label="Scroll to contact section to message us on WhatsApp" title="WhatsApp">
+        <i class="ri-whatsapp-fill"></i>
+      </a>
+
+      <!-- Instagram -->
+      <a href="https://www.instagram.com/happybalance_247" target="_blank"
+        aria-label="Visit Happy Balance Instagram page" title="Instagram">
+        <i class="ri-instagram-fill"></i>
+      </a>
+
+      <!-- Facebook -->
+      <a href="https://www.facebook.com/happybalancebristol" target="_blank"
+        aria-label="Visit Happy Balance Facebook page" title="Facebook">
+        <i class="ri-facebook-fill"></i>
+      </a>
+    </div>
 
   <div class="hero-img" style="flex:1; display:flex; justify-content:flex-end;">
     <img src="./HappyBalanceImages/ClaireSJ4.png" 
-         alt="Claire and SJ" 
+         alt="The Happy Balance Bristol Team" 
          style="max-width:100%; height:auto; object-fit:contain;">
   </div>
 </section>
@@ -117,7 +140,7 @@
   <div class="about-img" data-aos="zoom-in-down" 
        style="display:flex; justify-content:center; align-items:flex-start; position:relative;">
     <img src="./HappyBalanceImages/ClaireSJ2.jpg"
-         alt="About Happy Balance"
+         alt="About Happy Balance Bristol"
          style="width:100%; max-width:530px; height:530px; object-fit:cover; border-radius:50%;
                 border:7px solid #59C4F0; box-shadow:0 0 20px #59C4F0; position:relative; top:0;" />
     
@@ -164,7 +187,7 @@
 <!-- MOBILE VERSION -->
 <section class="about-mobile" id="about-mobile">
   <div class="about-img" data-aos="zoom-in-down">
-    <img src="./HappyBalanceImages/ClaireSJ2.jpg" alt="About Happy Balance" />
+    <img src="./HappyBalanceImages/ClaireSJ2.jpg" alt="About Happy Balance Bristol" />
   </div>
   <div class="about-info-box">
     Happy Balance is based in Easton In Gordano BS20 and covers Bristol and North Somerset. To schedule a consultation please contact us via email, phone call, whatsapp, instagram or facebook. 
@@ -287,66 +310,110 @@
                          -1px  1px 0 #000,
                           1px  1px 0 #000;">Contact Happy Balance</h2>
 
-  <form action="mailto:help@happybalancebristol.co.uk" method="post" enctype="text/plain"
-        style="display:flex; flex-direction:column; gap:20px; width:100%; max-width:600px;">
-    <input type="text" name="name" placeholder="Your Name" required 
-           style="padding:14px; border-radius:8px; border:2px solid #59C4F0; font-size:16px; width:100%; color:#000; background:var(--bg-color);">
-    <input type="email" name="email" placeholder="Your Email" required 
-           style="padding:14px; border-radius:8px; border:2px solid #59C4F0; font-size:16px; width:100%; color:#000; background:var(--bg-color);">
-    <input type="tel" name="phone" placeholder="Your Number" required 
-           style="padding:14px; border-radius:8px; border:2px solid #59C4F0; font-size:16px; width:100%; color:#000; background:var(--bg-color);">
-    <textarea name="message" placeholder="Your Message" required rows="6"
-           style="padding:14px; border-radius:8px; border:2px solid #59C4F0; font-size:16px; width:100%; resize:none; color:#000; background:var(--bg-color);"></textarea>
-    <button type="submit" class="send-btn"
-           style="padding:14px; border-radius:8px; border:2px solid #59C4F0; font-size:16px; width:100%; color:#fff; background:#59C4F0; cursor:pointer; text-align:center;">
-      Send Message
-    </button>
-  </form>
+<!-- form -->
 
-  <div class="contact-info">
-    <div class="contact-item">
-      <div class="contact-icon">
-        <i class="ri-phone-fill"></i>
-      </div>
-      <span>
-        <span class="phone-number" onclick="copyToClipboard('07412010800')">07412010800</span> 
-        or 
-        <span class="phone-number" onclick="copyToClipboard('07810481668')">07810481668</span>
-      </span>
-    </div>
+<form id="contact-form" 
+      style="display:flex; flex-direction:column; gap:20px; width:100%; max-width:600px;">
 
-    <div class="contact-item" onclick="copyToClipboard('help@happybalancebristol.co.uk')">
-      <div class="contact-icon">
-        <i class="ri-mail-fill"></i>
-      </div>
-      <span>help@happybalancebristol.co.uk</span>
-    </div>
+  <input type="hidden" name="access_key" value="2d874f06-cfce-4a9f-973f-68a76f98fbee">
 
-    <div class="contact-item" onclick="window.open('https://www.instagram.com/happybalance_247', '_blank')">
-      <div class="contact-icon">
-        <i class="ri-instagram-fill"></i>
-      </div>
-      <span>happybalance_247</span>
-    </div>
+  <input type="text" name="name" placeholder="Your Name" required
+         style="padding:14px; border-radius:8px; border:2px solid #59C4F0; font-size:16px; width:100%; color:#000; background:var(--bg-color);">
+  
+  <input type="email" name="email" placeholder="Your Email" required
+         style="padding:14px; border-radius:8px; border:2px solid #59C4F0; font-size:16px; width:100%; color:#000; background:var(--bg-color);">
+  
+  <input type="tel" name="phone" placeholder="Your Number" required
+         style="padding:14px; border-radius:8px; border:2px solid #59C4F0; font-size:16px; width:100%; color:#000; background:var(--bg-color);">
+  
+  <textarea name="message" placeholder="Your Message" required rows="6"
+            style="padding:14px; border-radius:8px; border:2px solid #59C4F0; font-size:16px; width:100%; resize:none; color:#000; background:var(--bg-color);"></textarea>
 
-    <div class="contact-item" onclick="window.open('https://wa.me/+447412010800', '_blank')">
-      <div class="contact-icon">
-        <i class="ri-whatsapp-fill"></i>
-      </div>
-      <span>
-        <span class="phone-number" onclick="window.open('https://wa.me/+447412010800', '_blank')">07412010800</span> 
-        or 
-        <span class="phone-number" onclick="window.open('https://wa.me/+447810481668', '_blank')">07810481668</span>
-      </span>
-    </div>
+  <input type="checkbox" name="botcheck" style="display:none;">
 
-    <div class="contact-item" onclick="window.open('https://www.facebook.com/happybalancebristol', '_blank')">
-      <div class="contact-icon">
-        <i class="ri-facebook-fill"></i>
-      </div>
-      <span>happybalancebristol</span>
+  <button type="submit" style="padding:14px; border-radius:8px; border:2px solid #59C4F0; font-size:16px; width:100%; color:#fff; background:#59C4F0; cursor:pointer;">
+    Send Message
+  </button>
+</form>
+
+<script>
+const form = document.getElementById('contact-form');
+
+form.addEventListener('submit', async (e) => {
+  e.preventDefault(); // stop the default redirect
+
+  const formData = new FormData(form);
+
+  try {
+    const response = await fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      body: formData
+    });
+
+    if(response.ok) {
+      alert('✅ Message sent successfully!');
+      form.reset();
+    } else {
+      alert('❌ There was an error sending your message.');
+    }
+  } catch (err) {
+    console.error(err);
+    alert('❌ There was an error sending your message.');
+  }
+});
+</script>
+
+
+
+
+
+
+<div class="contact-info" aria-label="Contact information for Happy Balance Bristol">
+
+  <div class="contact-item" aria-label="Phone numbers. Click to copy to clipboard.">
+    <div class="contact-icon">
+      <i class="ri-phone-fill" aria-hidden="true"></i>
     </div>
+    <span>
+      <span class="phone-number" onclick="copyToClipboard('07412010800')" aria-label="Copy phone number 07412 010800 to clipboard">07412010800</span> 
+      or 
+      <span class="phone-number" onclick="copyToClipboard('07810481668')" aria-label="Copy phone number 07810 481668 to clipboard">07810481668</span>
+    </span>
   </div>
+
+  <div class="contact-item" onclick="copyToClipboard('help@happybalancebristol.co.uk')" 
+       aria-label="Email address. Click to copy to clipboard.">
+    <div class="contact-icon">
+      <i class="ri-mail-fill" aria-hidden="true"></i>
+    </div>
+    <span aria-label="Email: help@happybalancebristol.co.uk">help@happybalancebristol.co.uk</span>
+  </div>
+
+  <div class="contact-item" onclick="window.open('https://www.instagram.com/happybalance_247', '_blank')" 
+       aria-label="Instagram. Click to open Happy Balance Instagram in a new tab.">
+    <div class="contact-icon">
+      <i class="ri-instagram-fill" aria-hidden="true"></i>
+    </div>
+    <span aria-label="Instagram handle: happybalance_247">happybalance_247</span>
+  </div>
+
+  <div class="contact-item" onclick="window.open('https://wa.me/+447412010800', '_blank')" 
+       aria-label="WhatsApp. Click to open WhatsApp chat in a new tab.">
+    <div class="contact-icon">
+      <i class="ri-whatsapp-fill" aria-hidden="true"></i>
+    </div>
+    <span>
+      <span class="phone-number" onclick="window.open('https://wa.me/+447412010800', '_blank')" 
+            aria-label="WhatsApp number 07412 010800. Click to open chat.">07412010800</span> 
+      or 
+      <span class="phone-number" onclick="window.open('https://wa.me/+447810481668', '_blank')" 
+            aria-label="WhatsApp number 07810 481668. Click to open chat.">07810481668</span>
+    </span>
+  </div>
+
+</div>
+
+
 </section>
 
 <script>
@@ -365,7 +432,7 @@
   <a href="#home" class="scroll-top" style="display:inline-flex; align-items:center; justify-content:center; width:45px; height:45px; border-radius:50%; background:#000; color:#fff; text-decoration:none;">
     <img
       src="./HappyBalanceImages/Happy-Balance-Logo.png"
-      alt="Logo"
+      alt="Scroll to top Happy Balance Logo"
       style="height:100%; width:auto; object-fit:contain; display:block; transition: height .3s ease;"
     />
   </a>
