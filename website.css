@@ -714,10 +714,10 @@ header.sticky{
 /* MOBILE FIXES */
 @media (max-width: 940px) {
 
-.hero-img img {
-  margin-top: -100px;  /* pushes image up */
-  width: 100vw;
-}
+  /* Hide hero image */
+  .hero-img img {
+    display: none;
+  }
 
   /* About section (mobile only) */
   .about-desktop { 
